@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 28 100 242;
+    --color-warning: 255 59 48;
+  }
+
+  body {
+    @apply bg-[#050B2E] text-white;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-white/5 backdrop-blur-lg border border-white/10 rounded-xl;
+  }
+  
+  .neon-button {
+    @apply px-6 py-3 rounded-lg bg-[rgb(var(--color-primary))] 
+           hover:bg-[rgb(var(--color-primary))]/80 transition-all duration-200
+           shadow-[0_0_15px_rgba(var(--color-primary),0.5)]
+           hover:shadow-[0_0_25px_rgba(var(--color-primary),0.7)];
+  }
+
+  .warning-panel {
+    @apply bg-[rgb(var(--color-warning))]/10 border-[rgb(var(--color-warning))]/30;
+  }
+}
